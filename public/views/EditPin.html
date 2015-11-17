@@ -1,0 +1,17 @@
+<form class="well container animated" ng-submit="vm.editPin(vm.pin._id)" ng-class="vm.class">
+	<div>
+		<label>Title</label>
+		<input class="form-control" placeholder="{{vm.pin.title}}" ng-model="vm.newTitle">
+		<label>Image</label>
+		<input class="form-control" placeholder="{{vm.pin.img}}" ng-model="vm.newImg"><span><img class="img-responsive" src="{{vm.pin.img}}"></span>
+		<label>Description</label>
+		<input class="form-control" placeholder="{{vm.pin.desc}}" ng-model="vm.newDesc">
+		<center><button type="submit" class="btn btn-primary" ng-disabled="!vm.newTitle || !vm.newImg || !vm.newDesc" ng-click="vm.class='zoomOutDown'">Submit</button>
+		<center>
+	</div>
+	</form>
+<div class="well"><center>
+	<button class="btn btn-danger" ng-click="vm.deletePin(vm.pin._id)">
+				Delete
+	</button></center>
+</div>

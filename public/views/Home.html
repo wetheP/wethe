@@ -1,0 +1,54 @@
+<!-- <div ng-controller="HomeController as vm">
+	<div ng-repeat="pin in vm.pins track by $index">
+		<div>
+			<div class="container well col-md-4 pin">
+				<div>
+					<h3>Title: {{pin.title}}</h3> 
+				</div>
+				<div class="well likes">
+					{{pin.likes}}
+					<div>
+						<button ng-click="vm.addOne($index)" class="borderRadius marginBottom btn btn-primary">
+							+
+						</button>
+						<button ng-click="vm.subOne($index)" class="borderRadius marginBottom btn btn-warning">
+							-
+						</button>
+					</div>
+				</div>
+				<div class="pinImg">
+					<img class="img-responsive" src="{{pin.img}}">
+				</div>
+				<div class="">
+					<h4>{{pin.desc}}</h4>
+				</div>
+				<button ui-sref="PinInfo({id: pin._id})" class="borderRadius marginBottom btn btn-info pull-right">See Pin</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+<div ng-controller="HomeController as vm" class="pinGrid">
+	<div ng-repeat="pin in vm.pins | filter:searchPin" ng-show="pin.deleted" class="pinGridWrapper">
+		<div class="pin animated flipInY">
+			<div>
+				<h3 class="textCenter">{{pin.title}}</h3>
+				
+				<img ng-src="{{pin.img}}">
+			    <h4 class="textCenter">
+			    	{{pin.desc}}</h4> 
+			    <button ng-click="vm.subOne($index)"  class=".minbutton btn btn-warning">
+						-
+				</button>
+					
+				<button ng-click="vm.addOne($index)" class="btn btn-primary">
+					+
+				</button><span class="likes">
+			    		{{pin.likes}}
+			    	</span><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+
+				<button ui-sref="PinInfo({id: pin._id})" class="borderRadius marginBottom btn btn-info pull-right">Dive In</button><br><br>
+    			</div>
+			</div>				
+		</div>
+	</div>
+</div>

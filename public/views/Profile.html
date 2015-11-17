@@ -1,0 +1,42 @@
+<center><div class='well animated bounceInDown'>
+	<span><h1>{{nav.pinUser.username}}'s profile</h1></span>
+	
+	<div>
+		<img class="img-circle img-responsive" src="{{nav.pinUser.image}}">
+	</div>
+	<div>
+		<h3>Your Pins</h3>
+		<div ng-repeat="pin in nav.pinUser.pins track by $index" ng-show="pin.deleted">
+			<div>
+				<div class="well pininfo">
+					<span style="font-size: 30px;">{{pin.title}}    
+						<span class="glyphicon glyphicon-heart" aria-hidden="true">{{pin.likes}}
+						</span>
+					</span>
+					 
+					<div class="well imginfo">
+						<img class="img-responsive "  src="{{pin.img}}">
+					</div>
+					<div class="well">
+						<h3>{{pin.desc}}<h3>
+					</div>
+					<button ui-sref="EditPin({id: pin._id})" class="btn btn-warning">
+						Edit
+					</button>
+					<!-- <button class="btn btn-danger" ng-click="nav.deletePin($index)">
+						Delete
+					</button> -->
+				
+					<button ui-sref="PinInfo({id: pin._id})" class="btn btn-info">See Pin</button>
+				</div>
+			</div>
+		</div>
+		<!-- {{nav.pinUser}} -->
+		<!-- <div ng-repeat="friend in nav.pinUser.friends">
+			<div>
+			Friends:
+			{{friend}}
+			</div>
+		</div> -->
+	</div>
+</div></center>
