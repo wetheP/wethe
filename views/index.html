@@ -22,46 +22,46 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button> -->
-
+<!--hgdusfh-->
 			      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				      <a class="navbar-brand" ui-sref="Home">Pint</a>
 				      <a ng-show="nav.status.username" class="navbar-brand" ui-sref="CreatePin">Create Pin</a>
 				      <a ng-show="!nav.status.username" class="navbar-brand" ui-sref="RegisterUser">Register</a>
 					  <a ng-show="!nav.status.username" class="navbar-brand" ui-sref="LogIn">Login</a>
-					
+
 					  <a ng-show="nav.status.username" style="text-align: right" class="navbar-brand pull-right" ng-click="nav.logout();">LogOut</a>
 					  <a ng-show="nav.status.username" class="navbar-brand pull-right" ui-sref="Profile" ng-click="nav.getUser()">{{nav.status.username}}</a>
 			  	  </div>
 
-			  
+
 
 			      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 			      	  <input class="form-control" placeholder="search Pin by Name" ng-model="searchPin">
-					  
-				  
-				  </div>
-				  
-				
-				  
 
-				 
-			      
-			    <!-- 
+
+				  </div>
+
+
+
+
+
+
+			    <!--
 			      <a ng-show="!nav.status.username"class="navbar-brand navbar-right" ui-sref="">{{nav.status.username}}</a>
 				  <a ng-show="!nav.status.username"class="navbar-brand" ui-sref="LogOut">Logout</a>
 				  {{nav.status.username}} -->
-			    
-					 
+
+
 			    </div>
 			</div>
 
-			
-		
+
+
 		</div>
 		<ui-view></ui-view>
 	</div>
-	
-	
+
+
 	<!-- Ext Libs -->
 	<script src="angular/angular.min.js"></script>
 	<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
